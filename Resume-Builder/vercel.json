@@ -1,13 +1,6 @@
 {
-    "builds": [
-      {
-        "src": "Resume-Builder/frontend/package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "Resume-Builder/frontend" // Specify the directory where index.html is located
-        }
-      }
-    ],
+    "buildCommand": "cd Resume-Builder/frontend && npm install && npm run build",
+    "outputDirectory": "Resume-Builder/frontend/dist",
     "rewrites": [
       {
         "source": "/api/(.*)",
