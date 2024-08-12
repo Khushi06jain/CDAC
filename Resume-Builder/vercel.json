@@ -1,10 +1,10 @@
 {
-    "buildCommand": "cd Resume-Builder/frontend && npm install && npm run build",
+    "buildCommand": "Resume-Builder/frontend && npm install && npm run build",
     "outputDirectory": "Resume-Builder/frontend/dist",
     "rewrites": [
       {
         "source": "/api/(.*)",
-        "destination": "/api/$1"
+        "destination": "/api/index.js"
       }
     ],
     "functions": {
