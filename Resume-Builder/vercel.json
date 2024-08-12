@@ -1,6 +1,6 @@
 {
     "buildCommand": "cd Resume-Builder/frontend && npm install && npm run build",
-    "outputDirectory": "Resume-Builder/frontend/dist",
+    "outputDirectory": "Resume-Builder/frontend",
     "framework": "vite",
     "rewrites": [
       {
