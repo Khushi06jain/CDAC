@@ -1,17 +1,12 @@
+
 {
-    "buildCommand": "cd Resume-Builder/frontend && npm install && npm run build",
-    "outputDirectory": "Resume-Builder/frontend",
+    "buildCommand": "cd frontend && npm install && npm run build ",
+    "outputDirectory": "frontend/dist",
     "framework": "vite",
-    "rewrites": [
+    "rewrites":[
       {
-        "source": "/api/(.*)",
-        "destination": "/api/$1"
+          "source": "/api/(.*)",
+          "destination": "/api/index.js"
       }
-    ],
-    "functions": {
-      "api/index.js": {
-        "runtime": "nodejs14.x"
-      }
-    }
+  ]
   }
-  
