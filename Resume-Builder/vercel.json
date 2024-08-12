@@ -1,12 +1,23 @@
-
 {
-    "buildCommand": "cd frontend && npm install && npm run build ",
-    "outputDirectory": "frontend/dist",
-    "framework": "vite",
-    "rewrites":[
+    "builds": [
       {
-          "source": "/api/(.*)",
-          "destination": "/api/index.js"
+        "src": "Resume-Builder/frontend/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "Resume-Builder/frontend" // Specify the directory where index.html is located
+        }
       }
-  ]
+    ],
+    "rewrites": [
+      {
+        "source": "/api/(.*)",
+        "destination": "/api/$1"
+      }
+    ],
+    "functions": {
+      "api/index.js": {
+        "runtime": "nodejs14.x"
+      }
+    }
   }
+  
